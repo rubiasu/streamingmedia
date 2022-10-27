@@ -90,18 +90,15 @@ a {
 }
 
 #playlists h3, #curated h3 {
-    /* font-size: 16pt; */
     font-weight: bold;
     color: #ffffff
 }
 
 #playlists p, #curated h3 {
-    /* font-size: 14pt; */
     color: #ffffff;
 }
 
 #trending h3 {
-    /* font-size: 16pt; */
     font-weight: bold;
     color: #590242;
 }
@@ -196,8 +193,6 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
 /* Scroll */
 
 .scroll {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     overflow-x: auto;
     overflow-y: hidden;
     max-height: 500px;
@@ -214,10 +209,19 @@ section h2 {
     position: relative;
 }
 
+#trending .scroll {
+    display: flex;
+}
+
+#playlists .scroll, #curated .scroll {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
 
 #playlists .scroll {
     background-color: #2699FB;
 }
+
 
 #playlists .scroll a {
     background-color: #0D8DFB;
@@ -276,8 +280,6 @@ audio {
     position: absolute;
     bottom: 50%;
     left: 5px;
-    /* color:rgba(255, 255, 255, .1); */
-    /* background-color: rgba(255, 255, 255, .5); */
     mix-blend-mode: screen;
     border-radius: 25px;
 }
