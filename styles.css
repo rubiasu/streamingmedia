@@ -209,11 +209,11 @@ section h2 {
     position: relative;
 }
 
-#trending .scroll {
+#trending .scroll, #playlists .scroll {
     display: flex;
 }
 
-#playlists .scroll, #curated .scroll {
+#curated .scroll {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
@@ -393,9 +393,11 @@ dd {
         width: 50%;
     }
 
-    #playlists .scroll, #curated .scroll {
-        display: flex;
+    #playlists .scroll {
         flex-direction: column;
+    }
+    #curated .scroll {
+        grid-template-columns: 1fr;
     }
     
     section:not(#trending) h3{
@@ -416,5 +418,4 @@ dd {
         overflow-x: hidden;
         overflow-y: auto;
     }
-
 }
