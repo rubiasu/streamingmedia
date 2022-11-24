@@ -198,6 +198,13 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     max-height: 500px;
 }
 
+@supports (scroll-snap-type: x mandatory) {
+    #trending .scroll {
+        scroll-snap-type: x mandatory;
+        scroll-padding: 10px;
+    }
+}
+
 section h2 {
     line-height: 0em;
     margin-top: 2em;
